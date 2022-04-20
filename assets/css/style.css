@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: all .3s linear;
+}
+
+:root {
+    --white: #F4F4F4;
+    --white-color: #FFF;
+    --grey: #3A3535;
+    --black-light: #232020;
+}
+
+html {
+    /* font-size: 62.5%; */
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    background-color: var(--black-light);
+}
+
+header {
+    background-color: var(--grey);
+    color: #fff;
+    width: 100%;
+    padding: 1rem 5%;
+}
+
+.headerArea {
+    max-width: 1080px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerArea .logo {
+    margin-right: 2rem;
+}
+
+.headerArea .logo a {
+    font-size: 2rem;
+    color: var(--white-color);
+}
+
+.headerArea .searchItem {
+    width: 300px;
+    margin-right: 2rem;
+}
+
+.headerArea .searchItem input {
+    width: 100%;
+    border-radius: .3rem;
+    padding: .4rem 1rem;
+    background-color: #454545;
+    color: var(--white);
+}
+
+.headerArea .touch-area {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+}
+
+.headerArea .touch-area .notification i {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.headerArea .touch-area .song-area {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.headerArea .touch-area .song-area span {
+    margin-left: .5rem;
+    color: var(--white-color);
+}
+
+.headerArea .options {
+    margin-right: 2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: .8rem 1rem;
+}
+
+.headerArea .user-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.headerArea .user-icon img {
+    height: 100%;
+    text-align: center;
+    line-height: 40;
+    object-fit: cover;
+}
+
+.Notification-modal {
+    position: relative;
+}
+
+.box-modal {
+    background-color: var(--grey);
+    max-width: 500px;
+    margin: 5px auto;
+    position: absolute;
+    top: 0px;
+    left: 10%;
+    right: 0;
+    border-bottom-left-radius: .8rem;
+    border-bottom-right-radius: .8rem;
+    display: none;
+}
+
+.box-modal .modal-header .content-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-modal .modal-header .content-modal {
+    border-bottom: .1rem solid var(--black-light);
+    padding: .4rem 1rem;
+}
+
+.box-modal .modal-header .content-modal p {
+    color: #CCC;
+    font-size: .8rem;
+}
+
+.box-modal .modal-header .content-modal span {
+    color: #CCC;
+    font-size: .8rem;
+}
+
+.box-modal .modal-header .content-modal span:hover {
+    text-decoration: underline;
+}
+
+.box-modal .notification-item {
+    margin-top: 1rem;
+}
+
+.box-modal .notification-item .item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.4rem 3%;
+    border-bottom: .1rem solid var(--black-light);
+}
+
+.box-modal .notification-item .item:hover {
+    background-color: #5C5C5C;
+}
+
+.box-modal .notification-item .item .user-content {
+    color: var(--white-color);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.box-modal .notification-item .item .user-content p {
+    font-size: 1.1rem;
+}
+
+.box-modal .notification-item .item .user-image {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.box-modal .notification-item .item .user-image.blue {
+    background-color: blue;
+}
+
+.box-modal .notification-item .item .user-image.purple {
+    background-color: rebeccapurple;
+}
+
+.box-modal .notification-item .item .user-image.gray {
+    background-color: gray;
+}
+
+
+.box-modal .notification-item .item .user-image img {
+    height: 100%;
+    text-align: center;
+    line-height: 40;
+    object-fit: cover;
+}
+
+.OptionModal {
+    position: relative;
+    display: none;
+}
+
+.box-Option {
+    background-color: var(--grey);
+    max-width: 600px;
+    margin: 5px auto;
+    position: fixed;
+    top: 80px;
+    right: 50px;
+    padding: 2rem;
+
+}
+
+.box-Option .Option-Header h3 {
+    color: var(--white);
+    font-size: .8rem;
+    margin-bottom: 2rem;
+}
+
+.box-Option .catalog-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.box-Option .catalog-items .options-items {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box-Option .catalog-items .options-items .icon-image {
+    height: 100%;
+    cursor: pointer;
+    padding: .6rem;
+    border-radius: 50%;
+}
+
+.box-Option .catalog-items .options-items .icon-image:hover {
+    opacity: .5;
+}
+
+.box-Option .catalog-items .options-items .icon-image i {
+    font-size: 2rem;
+    padding: .3rem;
+    color: var(--white-color);
+}
+
+.box-Option .catalog-items .options-items .name {
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-top: 1rem;
+}
+
+main {
+    max-width: 1080px;
+    margin: 2rem auto;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+aside ul li {
+    color: var(--white-color);
+}
+
+.hero .user-area {
+    padding: 0 5%;
+    margin-left: -10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 250px;
+    background-color: rgba(44, 43, 43, 0.8);
+    border-radius: .5rem;
+}
+
+.hero .user-area .user-area-background {
+    background-color: var(--white-color);
+    width: 200px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .8rem;
+    margin: 1rem 0;
+}
+
+.hero .user-area .user-area-background img {
+    height: 100%;
+    padding: 1rem;
+    object-fit: cover;
+}
+
+.hero .user-area .edit-area {
+    width: 200px;
+}
+
+.hero .user-area .edit-area button {
+    width: 100%;
+    cursor: pointer;
+    border-radius: .5rem;
+    padding: .4rem 1rem;
+}
+
+.hero .user-area .remember-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.hero .user-area .remember-area:hover {
+    text-decoration: underline;
+}
+
+.hero .personal_information {
+    background-color: var(--grey);
+    max-width: 600px;
+    margin-left: -12rem;
+    height: 300px;
+}
+
+.hero .personal_information .box-infomation {
+    padding: .8rem 5%;
+    color: var(--white-color);
+}
+
+.hero .personal_information .box-infomation .content-personal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--black-light);
+}
+
+.hero .personal_information .box-infomation .content-personal h1 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.hero .personal_information .box-infomation .content-personal span {
+    font-size: .8rem;
+    color: var(--white-color);
+}
+
+.hero .personal_information .box-infomation .main-infomation {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hero .personal_information .box-infomation .main-infomation .main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero .personal_information .box-infomation .main-infomation .main-content a {
+    color: var(--white-color);
+}
+
+.hero .personal_information .box-infomation .main-infomation .main-content p {
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.hero .personal_information .box-infomation .main-infomation .main-content:hover {
+    text-decoration: underline;
+}
+
+.follow-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-top: 1px solid var(--black-light);
+}
+
+.follow-info .following-content {
+    text-align: center;
+}
+
+.follow-info .following-content h2 {
+    font-weight: 700;
+}

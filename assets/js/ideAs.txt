@@ -1,0 +1,1 @@
+fazer o player funcionar consumindo dados e uma APi

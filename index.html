@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VK - CLONE</title>
+  </head>
+  <body>
+    <header>
+      <div class="headerArea">
+        <div class="logo">
+          <a href="#" class="fa-brands fa-reddit-alien"></a>
+        </div>
+
+        <div class="searchItem">
+          <input type="search" placeholder="search" />
+        </div>
+        <div class="touch-area">
+          <div class="notification">
+            <i class="fa-solid fa-bell" id="notification"></i>
+          </div>
+          <div class="song-area">
+            <div class="icons-song">
+              <i class="fa-solid fa-backward-step"></i>
+              <i class="fa-solid fa-caret-right" style="margin: 0 0.5rem"></i>
+              <i class="fa-solid fa-forward-step"></i>
+              <span class="song-playing">Макс Корж — Бессонница</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="options" id="more">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="user-icon">
+          <img
+            src="assets/img/user.png"
+            alt="Alien User - all green with big eyes"
+            id="userIcon"
+          />
+        </div>
+      </div>
+    </header>
+
+    <section class="Notification-modal">
+      <div class="box-modal">
+        <div class="modal-header">
+          <div class="content-modal">
+            <p>your profile</p>
+            <span>settings</span>
+          </div>
+        </div>
+        <div class="notification-item">
+          <div class="item">
+            <div class="user-image red">
+              <img
+                src="assets/img/user.png"
+                alt="Green alien"
+                data-name="Green alien"
+              />
+            </div>
+            <div class="user-content">
+              <p>
+                You have an unread message
+                <strong id="greenAlien">--</strong> is waiting for you to reply
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="user-image blue">
+              <img
+                src="assets/img/user2.png"
+                alt="purple alien"
+                data-name="purple alien"
+              />
+            </div>
+            <div class="user-content">
+              <p>
+                You have an unread message
+                <strong id="purpleAlien">--</strong> is waiting for you to reply
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="user-image gray">
+              <img
+                src="assets/img/user3.png"
+                alt="blue alien"
+                class=""
+                data-name="blue alien"
+              />
+            </div>
+            <div class="user-content">
+              <p>
+                You have an unread message <strong id="blueAline">--</strong> is
+                waiting for you to reply
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="user-image purple">
+              <img
+                src="assets/img/user4.png"
+                alt="Gray alien"
+                data-name="gray alien"
+              />
+            </div>
+            <div class="user-content">
+              <p>
+                You have an unread message <strong id="grayAlien">--</strong> is
+                waiting for you to reply
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="OptionModal">
+      <div class="box-Option">
+        <div class="Option-Header">
+          <h3>VakAlien Catalog</h3>
+        </div>
+        <div class="catalog-items">
+          <div class="options-items">
+            <div class="icon-image" style="background-color: #ff6666">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <span class="name">Restaurant</span>
+          </div>
+
+          <div class="options-items">
+            <div class="icon-image" style="background-color: #7c66e8">
+              <i class="fa-solid fa-calendar-day"></i>
+            </div>
+            <span class="name">Calendar</span>
+          </div>
+
+          <div class="options-items">
+            <div class="icon-image" style="background-color: #ff6661">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <span class="name">Work</span>
+          </div>
+
+          <div class="options-items">
+            <div class="icon-image" style="background-color: #fcdd33">
+              <i class="fa-solid fa-microphone"></i>
+            </div>
+            <span class="name">Sirix</span>
+          </div>
+
+          <div class="options-items">
+            <div class="icon-image" style="background-color: #005ff9">
+              <i class="fa-solid fa-file-pdf"></i>
+            </div>
+            <span class="name">pdf</span>
+          </div>
+
+          <div class="options-items">
+            <div class="icon-image" style="background-color: #2351ff">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <span class="name">cloud</span>
+          </div>
+
+          <div class="options-items">
+            <div class="icon-image" style="background-color: #ee8208">
+              <i class="fa-brands fa-odnoklassniki"></i>
+            </div>
+            <span class="name">ok</span>
+          </div>
+
+          <div class="options-items">
+            <div class="icon-image" style="background-color: #00edc5">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <span class="name">mail</span>
+          </div>
+
+          <div class="options-items">
+            <div class="icon-image" style="background-color: #194af4">
+              <i class="fa-solid fa-sack-dollar"></i>
+            </div>
+            <span class="name">money</span>
+          </div>
+
+          <div class="options-items">
+            <div class="icon-image" style="background-color: #454545">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <span class="name">brain</span>
+          </div>
+
+          <div class="options-items">
+            <div class="icon-image" style="background-color: #ccc">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <span class="name">More</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="hero">
+        <aside>
+          <ul>
+            <li>
+              <i class="fa-solid fa-box-archive"></i>
+              <label for="fa-clock-rotate-left">Memories</label>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-clock-rotate-left"
+                id="fa-clock-rotate-left"
+              ></i>
+              <label for="fa-clock-rotate-left">Memories</label>
+            </li>
+            <li>
+              <i class="fa-solid fa-box-archive"></i>
+              <label for="fa-clock-rotate-left">Memories</label>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-clock-rotate-left"
+                id="fa-clock-rotate-left"
+              ></i>
+              <label for="fa-clock-rotate-left">Memories</label>
+            </li>
+            <li>
+              <i class="fa-solid fa-box-archive"></i>
+              <label for="fa-clock-rotate-left">Memories</label>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-clock-rotate-left"
+                id="fa-clock-rotate-left"
+              ></i>
+              <label for="fa-clock-rotate-left">Memories</label>
+            </li>
+            <li>
+              <i class="fa-solid fa-box-archive"></i>
+              <label for="fa-clock-rotate-left">Memories</label>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-clock-rotate-left"
+                id="fa-clock-rotate-left"
+              ></i>
+              <label for="fa-clock-rotate-left">Memories</label>
+            </li>
+            <li>
+              <i class="fa-solid fa-box-archive"></i>
+              <label for="fa-clock-rotate-left">Memories</label>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-clock-rotate-left"
+                id="fa-clock-rotate-left"
+              ></i>
+              <label for="fa-clock-rotate-left">Memories</label>
+            </li>
+          </ul>
+        </aside>
+
+        <section class="user-area">
+          <div class="user-area-background">
+            <img src="assets/img/user.png" alt="Green alien" />
+          </div>
+          <div class="edit-area">
+            <button>edit</button>
+          </div>
+          <div class="remember-area">
+            <i
+              class="fa-solid fa-clock-rotate-left"
+              id="fa-clock-rotate-left"
+            ></i>
+            <label for="fa-clock-rotate-left">Memories</label>
+          </div>
+          <div class="remember-area">
+            <i class="fa-solid fa-box-archive" id="fa-box-archive"></i>
+            <label for="fa-box-archive">story archive</label>
+          </div>
+          <div class="remember-area">
+            <i
+              class="fa-solid fa-money-bill-transfer"
+              id="fa-money-bill-transfer"
+            ></i>
+            <label for="fa-money-bill-transfer">money tranfers</label>
+          </div>
+        </section>
+
+        <section class="personal_information">
+          <div class="box-infomation">
+            <div class="content-personal">
+              <h1>alien green</h1>
+              <span>Last seen <strong>--</strong> minutes ago</span>
+            </div>
+            <div class="main-infomation">
+              <div class="main-content">
+                <p>Birthday:</p>
+                <a href="#">June 12, 2002</a>
+              </div>
+              <div class="main-content">
+                <p>Current city::</p>
+                <a href="#">Novosibirski</a>
+              </div>
+              <div class="main-content">
+                <p>Institutions:</p>
+                <a href="#">Yale University '28</a>
+              </div>
+            </div>
+            <div class="follow-info">
+              <div class="following-content">
+                <h2>--</h2>
+                <p>Friends</p>
+              </div>
+              <div class="following-content">
+                <h2>--</h2>
+                <p>follower</p>
+              </div>
+              <div class="following-content">
+                <h2>--</h2>
+                <p>photos</p>
+              </div>
+              <div class="following-content">
+                <h2>--</h2>
+                <p>track</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
